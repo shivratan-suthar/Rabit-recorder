@@ -1,0 +1,60 @@
+<!-- list_item_audio.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvFileNameLength"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Recording name - 00:00"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Play"
+            android:src="@android:drawable/ic_media_play"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="false"
+            android:clickable="true" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Menu"
+            android:src="@android:drawable/ic_menu_more"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" /> <!-- Initially hidden, shown when playing -->
+
+    <TextView
+        android:id="@+id/tvPlaybackTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="4dp"
+        android:text="00:00 / 00:00"
+        android:textSize="12sp"
+        android:visibility="gone" /> <!-- Initially hidden, shown when playing -->
+</LinearLayout>

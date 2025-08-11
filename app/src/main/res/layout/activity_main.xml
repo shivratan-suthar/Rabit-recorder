@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="12dp"
+        android:text="Recording Time: 00:00"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start Recording"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageButton
+            android:id="@+id/btnEditSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="Settings"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:layout_marginEnd="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_info"
+            android:contentDescription="App Info"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:tint="@color/black"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Normal Recordings:"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lvNormalFiles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp" />
+
+        <TextView
+            android:id="@+id/tvEmptyNormalFiles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No normal recordings."
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Permanent Recordings:"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lvPermanentFiles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp" />
+
+        <TextView
+            android:id="@+id/tvEmptyPermanentFiles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No permanent recordings."
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

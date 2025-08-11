@@ -52,7 +52,7 @@ The project follows a standard Android application structure. Key components inc
 
 1.  Clone the repository:
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/shivratan-suthar/Rabit-recorder.git
     ```
 2.  Open the project in Android Studio.
 3.  Let Android Studio sync the Gradle project.
